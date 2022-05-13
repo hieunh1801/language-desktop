@@ -1,0 +1,32 @@
+.header {
+  background-color: antiquewhite;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navigationList {
+  display: flex;
+  row-gap: 20px;
+}
+
+.navigationListButton:not(:last-child) {
+  margin-right: 20px;
+}
+
+.navigationListButton {
+  padding: 10px 20px;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.navigationListButton:hover {
+  background-color: lightblue;
+}
+
+.navigationListButton {
+  text-decoration: none;
+  color: black;
+}

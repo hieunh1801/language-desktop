@@ -1,0 +1,22 @@
+{
+  "sentences": [
+    {
+      "id": 1,
+      "en": "I am a very good person.",
+      "vi": "Tôi là một người rất tốt.",
+      "count": 0
+    },
+    {
+      "id": 2,
+      "en": "Who is your favorite person?",
+      "vi": "Ai là người yêu thích của bạn?",
+      "count": 0
+    },
+    {
+      "id": 3,
+      "en": "I like you.",
+      "vi": "Tôi thích bạn.",
+      "count": 0
+    }
+  ]
+}
