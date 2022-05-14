@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { sentenceManagementSelector } from "../../redux/sentence-management/sentence-management.selector";
 import { sentenceManagementActions } from "../../redux/sentence-management/sentence-management.slice";

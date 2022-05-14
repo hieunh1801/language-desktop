@@ -36,7 +36,8 @@ export const sentenceService = {
       _order: "id",
       _sort: "desc",
     });
-    if (existedSentence) {
+    console.log("existedSentence", existedSentence?.data.length);
+    if (existedSentence?.data.length > 0) {
       console.log("sentence existed");
       return;
     }
@@ -87,5 +88,32 @@ export const sentenceService = {
     });
     const response: Sentence = await data.json();
     return response;
+  },
+  getChallengeSentence: async () => {
+    const queryOption = {
+      _sort: "count,id",
+      _order: "asc,asc",
+      _limit: "1",
+    };
+    const queryString = objectToQueryString(queryOption);
+    const url = environment.baseUrl + "/sentences?" + queryString;
+    const data = await fetch(url);
+    const response: Sentence[] = await data.json();
+    return response?.[0];
+  },
+  completeSentenceChallenge: async (id: number, sentence: Sentence) => {
+    const url = environment.baseUrl + "/sentences/" + id;
+    const response = await fetch(url, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        ...sentence,
+        count: sentence.count + 1,
+      }),
+    });
+    const data: Sentence = await response.json();
+    return data;
   },
 };

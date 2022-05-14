@@ -2,7 +2,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Layout } from "./components/layout/layout";
 import { store } from "./redux/store";
-import { SentenceChallengeScreen } from "./screens/sentence-challenge/sentence-challenge";
+import { SentenceChallengeScreen } from "./screens/sentence-challenge/sentence-challenge.screen";
 import { SentenceManagementScreen } from "./screens/sentence-management/sentence-management.screen";
 
 const AppNavigator = () => {

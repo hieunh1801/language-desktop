@@ -33,6 +33,7 @@ function* fetchSentencesSaga() {
 function* createSentencesSaga(action: CreateSentencesActionType) {
   try {
     const sentencesString: string = action.payload.sentencesString;
+    console.log("sentencesString", sentencesString);
     if (!sentencesString) {
       return;
     }
@@ -51,6 +52,7 @@ function* createSentencesSaga(action: CreateSentencesActionType) {
             countAt: currentDateTimeString,
           } as SentenceCreateRequest)
       );
+    console.log("new sentences", newSentences);
     for (const newSentence of newSentences) {
       yield call(sentenceService.createSentence, newSentence);
     }

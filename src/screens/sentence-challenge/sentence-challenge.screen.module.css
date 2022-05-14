@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.sentence {
+  margin-top: 100px;
+  font-size: 30px;
+  user-select: all;
+  padding: 20px;
+  height: 30vh;
+  text-align: justify;
+}
+
+.sentence:hover {
+  cursor: pointer;
+}
+
+.sentence::selection {
+  background: #f5f5f5;
+}
+
+
+.sentenceMatch {
+  height: 20vh;
+  width: 100%;
+}
