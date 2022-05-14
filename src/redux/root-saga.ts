@@ -1,8 +1,9 @@
 import createSagaMiddleware from "redux-saga";
 import { all } from "redux-saga/effects";
-import { englishSentenceWatcherSaga } from "./english-sentence/english-sentence.saga";
+import { sentenceManagementWatcherSaga } from "./sentence-management/sentence-management.saga";
+
 export const rootSagaMiddleware = createSagaMiddleware();
 
 export function* rootSaga() {
-  yield all([englishSentenceWatcherSaga()]);
+  yield all([sentenceManagementWatcherSaga()]);
 }

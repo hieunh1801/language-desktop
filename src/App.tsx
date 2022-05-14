@@ -1,9 +1,11 @@
+import { Provider } from "react-redux";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Layout } from "./components/layout/layout";
+import { store } from "./redux/store";
 import { SentenceChallengeScreen } from "./screens/sentence-challenge/sentence-challenge";
 import { SentenceManagementScreen } from "./screens/sentence-management/sentence-management.screen";
 
-function App() {
+const AppNavigator = () => {
   return (
     <Router>
       <Routes>
@@ -12,13 +14,18 @@ function App() {
             path="sentence-challenge"
             element={<SentenceChallengeScreen />}
           />
-          <Route
-            path="sentence-management"
-            element={<SentenceManagementScreen />}
-          />
+          <Route path="sentences" element={<SentenceManagementScreen />} />
         </Route>
       </Routes>
     </Router>
+  );
+};
+
+function App() {
+  return (
+    <Provider store={store}>
+      <AppNavigator />
+    </Provider>
   );
 }
 

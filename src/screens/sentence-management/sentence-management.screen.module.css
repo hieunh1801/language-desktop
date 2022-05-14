@@ -1,0 +1,80 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.sentenceList {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 960px;
+}
+
+.sentenceListItem {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  display: grid;
+  grid-template-columns: 1fr 4fr 4fr 1fr 1fr;
+}
+
+.sentenceListItem__header {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  display: grid;
+  grid-template-columns: 1fr 4fr 4fr 1fr 1fr;
+  font-weight: 500;
+
+  background-color: #f5f5f5;
+}
+.sentenceListItem:hover {
+  background-color: #f5f5f5;
+}
+.sentenceListItem__deleteButton {
+  justify-self: end;
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.sentenceListItem__deleteButton:active {
+  opacity: 0.5;
+}
+
+.addMultipleSentence {
+  flex: 1;
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+}
+
+.addMultipleSentence__input {
+  min-height: 100px;
+  flex: 1;
+  border-color: #d2d2d2;
+  outline: none;
+}
+
+
+.addMultipleSentence__input:focus {
+  border-color: #d2d2d2;
+  outline: none;
+}
+
+.addMultipleSentence__addButton {
+  width: 100%;
+  background-color: #d2d2d2;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  height: 49px;
+}
+
+.addMultipleSentence__addButton:hover {
+  cursor: pointer;
+}
+
+.addMultipleSentence__addButton:active {
+  opacity: 0.5;
+}

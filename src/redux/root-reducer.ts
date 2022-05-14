@@ -1,6 +1,6 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import { englishSentenceReducer } from "./english-sentence/english-sentence.slice";
+import { sentenceManagementReducer } from "./sentence-management/sentence-management.slice";
 
 export const rootReducer = combineReducers({
-  englishSentence: englishSentenceReducer,
+  sentenceManagement: sentenceManagementReducer,
 });
